@@ -15,7 +15,7 @@ CVirtualNode::CVirtualNode(CNode *pNode)
 void CVirtualNode::setNode(CNode *pNode)
 {
     assert(pNode != NULL);
-    node = NULL;
+    node = pNode;
 }
 
 CNode *CVirtualNode::getNode()

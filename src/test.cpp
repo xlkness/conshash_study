@@ -61,16 +61,16 @@ int main()
 
     char object[100];
     CNode *node;
-    conhash->delNode(node2);
+    //conhash->delNode(node2);
 
 	cout << "total nodes:" << conhash->getVNode() << endl;
 
-    for ( int i = 0; i < 30; i++ ) {
+    for ( int i = 0; i < 1000000; i++ ) {
 		getIP(object);
         cin >> object;
         node = conhash->lookupNode(object);
         if ( node != NULL ) {
-            cout << object << "---->\t" << node->getIden() << " \t " << (char *)node->getData() << endl;
+            //cout << object << "---->\t" << node->getIden() << " \t " << (char *)node->getData() << endl;
             if ( strcmp(node->getIden(), "machineA" ) == 0 ) ans1++;
             if ( strcmp(node->getIden(), "machineB" ) == 0 ) ans2++;
             if ( strcmp(node->getIden(), "machineC" ) == 0 ) ans3++;

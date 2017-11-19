@@ -50,8 +50,9 @@ T *CMap<T>::lookup(int key)
 {
     typename map<int, T*>::iterator it;
     it = rbtree->lower_bound(key);
-    if ( it != rbtree->end() )
+    if ( it != rbtree->end() ) {
         return it->second;
+	}
     return min();
 }
 template<class T>
